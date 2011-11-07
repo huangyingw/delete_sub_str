@@ -15,17 +15,18 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str)
     for ( int k=0;k<temp;k++)
     {
       *result_str++=str[k];
-      cout<<str[k]<<endl;
+      cout<<k<<","<<str[k]<<endl;
     }
-    //cout<<origin_result<<endl;
+    cout<<"result->"<<origin_result<<endl;
   }
   return count;  
 }  
 
 int main()  
 {  
+  char *str = "12fuck345";  
   //char *str = "12fuck345fuck678fuck9";  
-  char *str = "12fuck";  
+  //char *str = "12fuck";  
   char *sub = "fuck";  
   char res[50] ="";  
   int count = delete_sub_str(str, sub, res);  
