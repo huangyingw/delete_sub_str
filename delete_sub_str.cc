@@ -13,14 +13,14 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str)
   {
     for ( int k=0;k<temp;k++)
     {
-      result_str[k]=str[k];
+      *result_str++=str[k];
     }
   }
   else
   {
     for ( int k=0;k<temp;k++)
     {
-      result_str[k]=str[k];
+      *result_str++=str[k];
     }
   }
   return count;  
