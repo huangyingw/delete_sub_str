@@ -4,37 +4,25 @@
 using namespace std;
 int delete_sub_str(const char *str, const char *sub_str, char *result_str)  
 {  
-  int count = 0;  
-  int k = 0;  
-  char *p3 = result_str;  
-  for(int i = 0; str[i] != '\0'; i++)  
-  {  
-    int tem = i; //tem保留主串中的起始判断下标位置   
-    int j = 0;  
-    while((str[i] != '\0') && (sub_str[j] != '\0') && (str[i] == sub_str[j]))  
-    {  
-      i++;  
-      j++;  
-    }  
-    cout<<sub_str[j]<<endl;
-    if(sub_str[j] != '\0')  
-    {  
-      i = tem;  
-      p3[k] = str[i];   
-      k++;  
-    }  
-    else  
-    {  
-      count += 1;  
-      i--;  
-    }         
-  }  
+  int count=0;
+  int i=0,j=0,temp=0;
+  while ( str[i]!=sub_str[j]) i++;
+  temp=i;
+  while ( str[i++]==sub_str[j++] && '\0' != sub_str[j]); 
+  if ( '\0' == sub_str[j])
+  {
+    for ( int k=0;k<temp;k++)
+    {
+      result_str[k]=str[k];
+    }
+  }
   return count;  
 }  
 
 int main()  
 {  
-  char *str = "12fuck345fuck678fuck9";  
+  //char *str = "12fuck345fuck678fuck9";  
+  char *str = "12fuck";  
   char *sub = "fuck";  
   char res[50] ="";  
   int count = delete_sub_str(str, sub, res);  
