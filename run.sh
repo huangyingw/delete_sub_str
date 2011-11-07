@@ -1,2 +1,2 @@
 make -B \
-&& ./num_of_a.exe
+&& ./delete_sub_str.exe

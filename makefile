@@ -1,3 +1,3 @@
-OBJECTS = num_of_a.exe
+OBJECTS = delete_sub_str.exe
 include ../../GNU_makefile_template
-LOCFLAGS = -I../num_of_a
+LOCFLAGS = -I../delete_sub_str
