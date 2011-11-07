@@ -1,6 +1,7 @@
 #include"stdio.h"
 #include"stdlib.h"
 #include<iostream>
+using namespace std;
 int delete_sub_str(const char *str, const char *sub_str, char *result_str)  
 {  
   int count = 0;  
@@ -15,6 +16,7 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str)
       i++;  
       j++;  
     }  
+    cout<<sub_str[j]<<endl;
     if(sub_str[j] != '\0')  
     {  
       i = tem;  
