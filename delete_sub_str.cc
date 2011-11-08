@@ -36,7 +36,6 @@ int main() {
   delete_sub_str(str, sub, res);  
   cout<<res<<endl;
 
-
   str = "12fuck345fuck678fuck9";  
   delete_sub_str(str, sub, res);  
   cout<<res<<endl;
