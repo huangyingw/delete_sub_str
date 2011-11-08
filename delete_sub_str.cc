@@ -49,10 +49,11 @@ int delete_sub_str(char str[], const char *sub_str)
     if (sub_str[j] == '\0')
     {
       found=true;
+      count++;
     }
     else
     {
-      return 0;
+      return count;
     }
 
     nav=q=i;
@@ -95,7 +96,7 @@ int main()
   cout<<str2<<endl;
 
   char str3[] = "12fuck345fuck678fuck9";
-  delete_sub_str(str3, sub);  
+  cout<<delete_sub_str(str3, sub)<<endl;
   cout<<str3<<endl;
 
   return 0;  
