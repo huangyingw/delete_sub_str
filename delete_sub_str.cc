@@ -73,26 +73,26 @@ int main()
   char *sub = "fuck";  
   char res[50] ="";  
 
-  //str = "12fuck345";  
-  //delete_sub_str(str, sub, res);  
-  //cout<<res<<endl;
+  str = "12fuck345";  
+  delete_sub_str(str, sub, res);  
+  cout<<res<<endl;
 
-  //str = "12fuck";  
-  //delete_sub_str(str, sub, res);  
-  //cout<<res<<endl;
+  str = "12fuck";  
+  delete_sub_str(str, sub, res);  
+  cout<<res<<endl;
 
 
-  //str = "12fuck345fuck678fuck9";  
-  //delete_sub_str(str, sub, res);  
-  //cout<<res<<endl;
+  str = "12fuck345fuck678fuck9";  
+  delete_sub_str(str, sub, res);  
+  cout<<res<<endl;
 
-  //char str1[] = "12fuck";  
-  //delete_sub_str(str1, sub);  
-  //cout<<str1<<endl;
+  char str1[] = "12fuck";  
+  delete_sub_str(str1, sub);  
+  cout<<str1<<endl;
 
-  //char str2[] = "12fuck345";  
-  //delete_sub_str(str2, sub);  
-  //cout<<str2<<endl;
+  char str2[] = "12fuck345";  
+  delete_sub_str(str2, sub);  
+  cout<<str2<<endl;
 
   char str3[] = "12fuck345fuck678fuck9";
   delete_sub_str(str3, sub);  
