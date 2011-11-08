@@ -6,7 +6,7 @@ using namespace std;
 int delete_sub_str(const char *str, const char *sub_str, char *result_str)  
 {  
   int count=0;
-  int i=0,j=0,temp=0;
+  int i=0,j=0;
   char * origin_result=result_str;
   while ( str[i]!=sub_str[j]) i++;
   for ( int k=0;k<i;k++)
@@ -16,7 +16,6 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str)
 
   while ( '\0' != str[i])
   {
-    temp=i;
     while ( str[i++]==sub_str[j++] && '\0' != sub_str[j]); 
     j=0;
     while ( str[i] != sub_str[j] && '\0' != str[i]) 
