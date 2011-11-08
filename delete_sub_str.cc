@@ -1,44 +1,54 @@
+// delete_sub_str.cpp : Defines the entry point for the console application.
 #include"stdio.h"
 #include"stdlib.h"
 #include<iostream>
+using namespace std;
 int delete_sub_str(const char *str, const char *sub_str, char *result_str)  
 {  
-  int count = 0;  
-  int k = 0;  
-  char *p3 = result_str;  
-  for(int i = 0; str[i] != '\0'; i++)  
-  {  
-    int tem = i; //tem保留主串中的起始判断下标位置   
-    int j = 0;  
-    while((str[i] != '\0') && (sub_str[j] != '\0') && (str[i] == sub_str[j]))  
-    {  
-      i++;  
-      j++;  
-    }  
-    if(sub_str[j] != '\0')  
-    {  
-      i = tem;  
-      p3[k] = str[i];   
-      k++;  
-    }  
-    else  
-    {  
-      count += 1;  
-      i--;  
-    }         
-  }  
+  int count=0;
+  int i=0,j=0,temp=0;
+  char * origin_result=result_str;
+  while ( str[i]!=sub_str[j]) i++;
+  for ( int k=0;k<i;k++)
+  {
+    *result_str++=str[k];
+  }
+
+  while ( '\0' != str[i])
+  {
+    temp=i;
+    while ( str[i++]==sub_str[j++] && '\0' != sub_str[j]); 
+	j=0;
+	while ( str[i] != sub_str[j] && '\0' != str[i]) 
+	{
+		*result_str++=str[i];
+		i++;
+	}
+    
+  }
+  *result_str='\0';
   return count;  
 }  
 
-int main()  
-{  
-  char *str = "12fuck345fuck678fuck9";  
+int main()
+{
+  char *  str = "";  
   char *sub = "fuck";  
   char res[50] ="";  
-  int count = delete_sub_str(str, sub, res);  
-  printf("子字符串的个数是：%d\n", count);  
-  printf("删除子字符串后：\n%s\n", res);  
-  return 0;  
-}  
 
+  str = "12fuck345";  
+  delete_sub_str(str, sub, res);  
+  cout<<res<<endl;
+
+  str = "12fuck";  
+  delete_sub_str(str, sub, res);  
+  cout<<res<<endl;
+
+
+  str = "12fuck345fuck678fuck9";  
+  delete_sub_str(str, sub, res);  
+  cout<<res<<endl;
+
+  return 0;  
+}
 
