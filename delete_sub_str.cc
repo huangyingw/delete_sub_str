@@ -10,7 +10,6 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str) {
   for ( int k=0;k<i;k++) {
     *result_str++=str[k];
   }
-
   while ( '\0' != str[i]) {
     while ( str[i++]==sub_str[j++] && '\0' != sub_str[j]); 
     j=0;
