@@ -18,13 +18,13 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str)
   {
     temp=i;
     while ( str[i++]==sub_str[j++] && '\0' != sub_str[j]); 
-	j=0;
-	while ( str[i] != sub_str[j] && '\0' != str[i]) 
-	{
-		*result_str++=str[i];
-		i++;
-	}
-    
+    j=0;
+    while ( str[i] != sub_str[j] && '\0' != str[i]) 
+    {
+      *result_str++=str[i];
+      i++;
+    }
+
   }
   *result_str='\0';
   return count;  
@@ -32,39 +32,39 @@ int delete_sub_str(const char *str, const char *sub_str, char *result_str)
 
 int delete_sub_str(char str[], const char *sub_str)  
 {  
-	int count=0;
-	bool found=true;
-	int i=0,j=0,temp=0,p=0,q=0,nav;
-	char * origin_str=str;
-	int len=sizeof(sub_str)/sizeof(char);
-	while(found)
-	{
-		i=0;
-		j=0;
-		found=false;
-		while ( str[i]!=sub_str[j]) i++;
-		p=i;
-		
-		while (sub_str[j]!='\0' && str[i++]==sub_str[j++]);
-		if (sub_str[j] == '\0')
-		{
-			found=true;
-		}
-		else
-		{
-			return 0;
-		}
-			
-		nav=q=i;
-		while (str[nav])
-		{
-			str[p++]=str[nav++];
-		}
-		if (str[nav]=='\0')
-			str[p]='\0';
-	}
-	
-	return count;  
+  int count=0;
+  bool found=true;
+  int i=0,j=0,temp=0,p=0,q=0,nav;
+  char * origin_str=str;
+  int len=sizeof(sub_str)/sizeof(char);
+  while(found)
+  {
+    i=0;
+    j=0;
+    found=false;
+    while ( str[i]!=sub_str[j]) i++;
+    p=i;
+
+    while (sub_str[j]!='\0' && str[i++]==sub_str[j++]);
+    if (sub_str[j] == '\0')
+    {
+      found=true;
+    }
+    else
+    {
+      return 0;
+    }
+
+    nav=q=i;
+    while (str[nav])
+    {
+      str[p++]=str[nav++];
+    }
+    if (str[nav]=='\0')
+      str[p]='\0';
+  }
+
+  return count;  
 }  
 
 int main()
