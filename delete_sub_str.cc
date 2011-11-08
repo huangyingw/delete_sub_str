@@ -33,9 +33,7 @@ int delete_sub_str(char str[], const char *sub_str)
 {  
   int count=0;
   bool found=true;
-  int i=0,j=0,temp=0,p=0,q=0,nav;
-  char * origin_str=str;
-  int len=sizeof(sub_str)/sizeof(char);
+  int i=0,j=0,p=0,nav=0;
   while(found)
   {
     i=0;
@@ -55,7 +53,7 @@ int delete_sub_str(char str[], const char *sub_str)
       return count;
     }
 
-    nav=q=i;
+    nav=i;
     while (str[nav])
     {
       str[p++]=str[nav++];
