@@ -66,6 +66,24 @@ int delete_sub_str(char str[], const char *sub_str)
   return count;
 }
 
+int count_sub(char *source,char *sub)
+{
+  int result=0;
+  int i=0,j=0;
+  while (source[i])
+  {
+    j=0;
+    while ( source[i++]!=sub[j]);
+    i--;
+    while ( source[i++] == sub[j] && sub[j++]);
+    if (!sub[j])
+    {
+      result++;
+    }
+  }
+  return result;
+}
+
 int main()
 {
   char *  str = "";
@@ -96,6 +114,8 @@ int main()
   char str3[] = "12fuck345fuck678fuck9";
   cout<<delete_sub_str(str3, sub)<<",";
   cout<<str3<<endl;
+
+  cout<<count_sub("12fuck345fuck678fuck9","fuck")<<endl;
 
   return 0;
 }
