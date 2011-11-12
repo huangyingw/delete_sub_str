@@ -43,8 +43,8 @@ int delete_sub_str(char str[], const char *sub_str)
     while ( str[i]!=sub_str[j]) i++;
     p=i;
 
-    while (sub_str[j]!='\0' && str[i]!='\0' && str[i++]==sub_str[j++]);
-    if (sub_str[j] == '\0')
+    while (sub_str[j] && str[i] && str[i++]==sub_str[j++]);
+    if (!sub_str[j])
     {
       found=true;
       count++;
