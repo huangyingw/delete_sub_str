@@ -43,7 +43,7 @@ int delete_sub_str(char str[], const char *sub_str)
     while ( str[i]!=sub_str[j]) i++;
     p=i;
 
-    while (sub_str[j]!='\0' && str[i++]==sub_str[j++]);
+    while (sub_str[j]!='\0' && str[i]!='\0' && str[i++]==sub_str[j++]);
     if (sub_str[j] == '\0')
     {
       found=true;
@@ -75,7 +75,7 @@ int count_sub(char *source,char *sub)
     j=0;
     while ( source[i++]!=sub[j]);
     i--;
-    while ( source[i++] == sub[j] && sub[j++]);
+    while (source[i]&& sub[j] && source[i++] == sub[j++] );
     if (!sub[j])
     {
       result++;
@@ -115,7 +115,20 @@ int main()
   cout<<delete_sub_str(str3, sub)<<",";
   cout<<str3<<endl;
 
-  cout<<count_sub("12fuck345fuck678fuck9","fuck")<<endl;
+  char str4[] = "12fuck345fuck678fuck9fuc";
+  cout<<delete_sub_str(str4, sub)<<",";
+  cout<<str4<<endl;
 
+  cout<<count_sub("12fuck345fuck678fuck9fuc","fuck")<<endl;
+  /*
+     12345
+     12
+     3,123456789
+     12
+     12345
+     3,123456789
+     3,123456789fuc
+     3
+     */
   return 0;
 }
