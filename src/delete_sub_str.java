@@ -35,10 +35,6 @@ public class delete_sub_str {
 				;
 			if (j == sub_str.length) {
 				i = temp;
-			} else {
-				while (i < temp) {
-					result_str[index++] = str[i++];
-				}
 			}
 			j = 0;
 			while (temp < str.length && str[temp] != sub_str[j])
