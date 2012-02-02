@@ -1,4 +1,26 @@
 public class delete_sub_str {
+	static int count_sub(char[] source, char[] sub) {
+		int count = 0;
+		int i = 0;
+		int j = 0;
+		int temp = 0;
+
+		while (i < source.length) {
+			temp = i;
+			j = 0;
+			while (temp < source.length && j < sub.length
+					&& source[temp++] == sub[j++])
+				;
+			if (j == sub.length) {
+				count++;
+				i = temp;
+			}
+			i++;
+		}
+
+		return count;
+	}
+
 	static char[] delete_sub_str_method(char[] str, char[] sub_str) {
 		char[] result_str = new char[str.length - sub_str.length];
 		int count = 0;
@@ -29,28 +51,6 @@ public class delete_sub_str {
 		}
 
 		return result_str;
-	}
-
-	static int count_sub(char[] source, char[] sub) {
-		int count = 0;
-		int i = 0;
-		int j = 0;
-		int index = 0, temp = 0;
-
-		while (i < source.length) {
-			temp = i;
-			j = 0;
-			while (temp < source.length && j < sub.length
-					&& source[temp++] == sub[j++])
-				;
-			if (j == sub.length) {
-				count++;
-				i = temp;
-			}
-			i++;
-		}
-
-		return count;
 	}
 
 	public static void main(String arg[]) {
