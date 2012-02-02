@@ -23,7 +23,6 @@ public class delete_sub_str {
 
 	static char[] delete_sub_str_method(char[] str, char[] sub_str) {
 		char[] result_str = new char[str.length - sub_str.length];
-		int count = 0;
 		int i = 0;
 		int j = 0;
 		int index = 0, temp = 0;
@@ -35,7 +34,6 @@ public class delete_sub_str {
 					&& str[temp++] == sub_str[j++])
 				;
 			if (j == sub_str.length) {
-				count++;
 				i = temp;
 			} else {
 				while (i < temp) {
