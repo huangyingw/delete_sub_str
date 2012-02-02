@@ -51,24 +51,22 @@ public class delete_sub_str {
 	public static void main(String arg[]) {
 		char[] sub = "fuck".toCharArray();
 
-		// System.out
-		// .println(delete_sub_str_method("12fuck345".toCharArray(), sub));
-		//
-		// System.out.println(delete_sub_str_method("12fuck".toCharArray(),
-		// sub));
-		//
-		// System.out.println((delete_sub_str_method(
-		// "12fuck345fuck678fuck9".toCharArray(), sub)));
-		//
-		// System.out.println(delete_sub_str_method("12fuck".toCharArray(),
-		// sub));
-		//
-		// System.out
-		// .println(delete_sub_str_method("12fuck345".toCharArray(), sub));
-		//
-		// System.out.println(delete_sub_str_method(
-		// "12fuck345fuck678fuck9".toCharArray(), sub));
-		//
+		System.out
+				.println(delete_sub_str_method("12fuck345".toCharArray(), sub));
+
+		System.out.println(delete_sub_str_method("12fuck".toCharArray(), sub));
+
+		System.out.println((delete_sub_str_method(
+				"12fuck345fuck678fuck9".toCharArray(), sub)));
+
+		System.out.println(delete_sub_str_method("12fuck".toCharArray(), sub));
+
+		System.out
+				.println(delete_sub_str_method("12fuck345".toCharArray(), sub));
+
+		System.out.println(delete_sub_str_method(
+				"12fuck345fuck678fuck9".toCharArray(), sub));
+
 		System.out.println(delete_sub_str_method(
 				"12fuck345fuck678fuck9fuc".toCharArray(), sub));
 
