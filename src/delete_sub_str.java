@@ -35,11 +35,13 @@ public class delete_sub_str {
 				;
 			if (j == sub_str.length) {
 				i = temp;
+			} else {
+				while (i < temp) {
+					result_str[index++] = str[i++];
+				}
 			}
 			j = 0;
-			while (temp < str.length && str[temp] != sub_str[j])
-				temp++;
-			while (i < temp)
+			while (i < str.length && str[i] != sub_str[j])
 				result_str[index++] = str[i++];
 		}
 
@@ -49,22 +51,24 @@ public class delete_sub_str {
 	public static void main(String arg[]) {
 		char[] sub = "fuck".toCharArray();
 
-		System.out
-				.println(delete_sub_str_method("12fuck345".toCharArray(), sub));
-
-		System.out.println(delete_sub_str_method("12fuck".toCharArray(), sub));
-
-		System.out.println((delete_sub_str_method(
-				"12fuck345fuck678fuck9".toCharArray(), sub)));
-
-		System.out.println(delete_sub_str_method("12fuck".toCharArray(), sub));
-
-		System.out
-				.println(delete_sub_str_method("12fuck345".toCharArray(), sub));
-
-		System.out.println(delete_sub_str_method(
-				"12fuck345fuck678fuck9".toCharArray(), sub));
-
+		// System.out
+		// .println(delete_sub_str_method("12fuck345".toCharArray(), sub));
+		//
+		// System.out.println(delete_sub_str_method("12fuck".toCharArray(),
+		// sub));
+		//
+		// System.out.println((delete_sub_str_method(
+		// "12fuck345fuck678fuck9".toCharArray(), sub)));
+		//
+		// System.out.println(delete_sub_str_method("12fuck".toCharArray(),
+		// sub));
+		//
+		// System.out
+		// .println(delete_sub_str_method("12fuck345".toCharArray(), sub));
+		//
+		// System.out.println(delete_sub_str_method(
+		// "12fuck345fuck678fuck9".toCharArray(), sub));
+		//
 		System.out.println(delete_sub_str_method(
 				"12fuck345fuck678fuck9fuc".toCharArray(), sub));
 
