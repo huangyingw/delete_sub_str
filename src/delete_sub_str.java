@@ -40,8 +40,7 @@ public class delete_sub_str {
 					result_str[index++] = str[i++];
 				}
 			}
-			j = 0;
-			while (i < str.length && str[i] != sub_str[j])
+			while (i < str.length && str[i] != sub_str[0])
 				result_str[index++] = str[i++];
 		}
 
