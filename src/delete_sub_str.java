@@ -43,7 +43,6 @@ public class delete_sub_str {
 			while (i < str.length && str[i] != sub_str[0])
 				result_str[index++] = str[i++];
 		}
-
 		return result_str;
 	}
 
