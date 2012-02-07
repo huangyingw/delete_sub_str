@@ -17,7 +17,6 @@ public class delete_sub_str {
 			}
 			i++;
 		}
-
 		return count;
 	}
 
@@ -75,7 +74,6 @@ public class delete_sub_str {
 				"fuck".toCharArray()));
 		System.out.println(count_sub("12fuk345fuck678fuck9fuc".toCharArray(),
 				"fuck".toCharArray()));
-
 		/*
 		 * 12345 12 3,123456789 12 12345 3,123456789 3,123456789fuc 3
 		 */
