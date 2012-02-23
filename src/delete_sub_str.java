@@ -3,17 +3,17 @@ public class delete_sub_str {
 		int count = 0;
 		int i = 0;
 		int j = 0;
-		int temp = 0;
+		int nav = 0;
 
 		while (i < source.length) {
-			temp = i;
+			nav = i;
 			j = 0;
-			while (temp < source.length && j < sub.length
-					&& source[temp++] == sub[j++])
+			while (nav < source.length && j < sub.length
+					&& source[nav++] == sub[j++])
 				;
 			if (j == sub.length) {
 				count++;
-				i = temp;
+				i = nav;
 			}
 			i++;
 		}
@@ -24,18 +24,18 @@ public class delete_sub_str {
 		char[] result_str = new char[str.length - sub_str.length];
 		int i = 0;
 		int j = 0;
-		int index = 0, temp = 0;
+		int index = 0, nav = 0;
 
 		while (i < str.length) {
-			temp = i;
+			nav = i;
 			j = 0;
-			while (temp < str.length && j < sub_str.length
-					&& str[temp++] == sub_str[j++])
+			while (nav < str.length && j < sub_str.length
+					&& str[nav++] == sub_str[j++])
 				;
 			if (j == sub_str.length) {
-				i = temp;
+				i = nav;
 			} else {
-				while (i < temp) {
+				while (i < nav) {
 					result_str[index++] = str[i++];
 				}
 			}
